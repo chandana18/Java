@@ -56,3 +56,5 @@ class HelloWorld {
         }
     }
 }
+//tc- O(n*m)
+//sc- O(n+m)
