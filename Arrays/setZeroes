@@ -1,0 +1,58 @@
+import java.util.*;
+class HelloWorld {
+    public static int[][] ZeroVal(ArrayList<Integer>row, ArrayList<Integer>column, int[][]matrix)
+    {
+        for(int k:row)
+        {
+            for(int i=0;i<matrix[k].length;i++)
+            {
+                matrix[k][i]=0;
+            }
+        }
+        for(int c:column)
+        {
+            for(int i=0;i<matrix.length;i++)
+            {
+                matrix[i][c]=0;
+            }
+        }
+        return matrix;
+    }
+    public static void main(String[] args) {
+        int[][] matrix={{0,1,2,0},{3,0,5,6},{1,1,1,1}};
+         for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix[i].length;j++)
+            {
+           
+        System.out.print(matrix[i][j]);
+            }
+            System.out.print("\n");
+        }
+         System.out.print("\n");
+        ArrayList<Integer> row=new ArrayList<>();
+        ArrayList<Integer> column=new ArrayList<>();
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix[i].length;j++)
+            {
+                if(matrix[i][j]==0)
+                {
+                    row.add(i);
+                    column.add(j);
+                    
+                }
+            }
+        }
+        matrix=ZeroVal(row,column,matrix);
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix[i].length;j++)
+            {
+           
+        System.out.print(matrix[i][j]);
+            }
+            System.out.print("\n");
+        }
+    }
+}
